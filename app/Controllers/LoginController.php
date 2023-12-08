@@ -16,6 +16,7 @@ class LoginController extends BaseController
         $password = md5($this->request->getPost('password'));
         $cek = $model->getDataUsers($email, $password);
         if ($cek == 1) {
+            session()->set('num_user', $cek);
             return redirect()->to('/');
         } else {
             return redirect()->to('/login');
@@ -23,6 +24,7 @@ class LoginController extends BaseController
     }
     public function logout()
     {
+        session()->destroy();
         return redirect()->to('/login');
     }
 }

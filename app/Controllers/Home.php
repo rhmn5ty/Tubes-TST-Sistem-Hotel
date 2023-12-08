@@ -4,8 +4,11 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
-        return view('header') . view('dashboard') . view('footer');
+        if (session()->get('num_user') == '') {
+            return redirect()->to('/login');
+        }
+        return view('header') . view('content') . view('footer');
     }
 }
