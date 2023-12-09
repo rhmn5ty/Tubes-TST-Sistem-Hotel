@@ -9,9 +9,10 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            position: fixed;
+            position: sticky;
             bottom: 0;
             width: 100%;
+
         }
     </style>
 </head>
@@ -26,7 +27,5 @@
         </p>
     </div>
 </footer>
-
-</body>
 
 </html>

@@ -11,20 +11,24 @@
             padding: 0;
             /* Remove default padding */
             box-sizing: border-box;
+            display: flex;
+            /* Use flexbox for layout */
+            flex-direction: column;
+            /* Arrange children in a column */
+            min-height: 100vh;
+            /* Minimum height to cover the viewport */
         }
 
         .hotel-card-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin: 0;
-            /* Remove margin */
             padding: 20px;
             /* Add padding for spacing */
             overflow-y: auto;
             /* Allow vertical scrolling for the container */
-            height: calc(80vh - 60px);
-            /* Set the height of the container (viewport height - header height) */
+            height: 100%;
+            /* Allow the container to take the remaining height */
         }
 
         .hotel-card {
@@ -51,6 +55,9 @@
         .content-container {
             width: 80%;
             margin: 0 auto;
+            /* Center the container horizontally */
+            flex: 1;
+            /* Allow the container to grow and take remaining space */
         }
 
         .reservation-button {
