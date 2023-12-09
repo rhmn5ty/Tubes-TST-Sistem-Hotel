@@ -20,4 +20,12 @@ class HomeCUSTOMER extends BaseController
 
         return view('headerCUSTOMER') . view('contentCUSTOMER', $data) . view('footer');
     }
+
+    public function detail($city)
+    {
+        $model = model(LocationInfo::class);
+        $data['location'] = $model->getLocationInfo($city);
+
+        return view('headerCUSTOMER') . view('detailHotel', $data) . view('footer');
+    }
 }

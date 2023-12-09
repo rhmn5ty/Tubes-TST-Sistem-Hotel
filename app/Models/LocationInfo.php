@@ -6,8 +6,13 @@ use CodeIgniter\Model;
 class LocationInfo extends Model
 {
     protected $table = 'location';
-    public function getLocationInfo()
+    public function getLocationInfo($city = false)
     {
-        return $this->findAll();
+        if ($city == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['city' => $city])->first();
+
     }
 }

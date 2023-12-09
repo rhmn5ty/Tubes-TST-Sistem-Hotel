@@ -11,3 +11,5 @@ $routes->get('/login', 'LoginController::index');
 $routes->get('/', 'LoginController::index');
 $routes->get('/logout', 'LoginController::logout');
 $routes->post('/login_action', 'LoginController::login_action');
+
+$routes->get('/home_customer/(:segment)', 'HomeCUSTOMER::detail/$1');

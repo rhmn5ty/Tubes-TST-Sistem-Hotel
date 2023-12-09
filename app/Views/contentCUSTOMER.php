@@ -32,10 +32,13 @@
             /* 25% minus padding */
             margin: 5px;
             /* Set a shorter margin */
-            padding: 15px;
+            padding: 15px 15px 40px;
             border: 1px solid #ddd;
             border-radius: 8px;
             background-color: #fff;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .hotel-card img {
@@ -48,6 +51,27 @@
         .content-container {
             width: 80%;
             margin: 0 auto;
+        }
+
+        .reservation-button {
+            position: absolute;
+            bottom: 10px;
+            /* Adjust the distance from the bottom */
+            left: 50%;
+            /* Center horizontally */
+            transform: translateX(-50%);
+            /* Center horizontally */
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            background-color: #0ad3ff;
+            /* Button background color */
+            color: #fff;
+            /* Button text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: auto;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -62,13 +86,20 @@
 
                 <?php foreach ($location as $location_item): ?>
                     <div class="hotel-card">
-                        <img src="<?php echo base_url('assets/images/hotel.jpg'); ?>" alt="Hotel">
-                        <h3>Hilton
-                            <?= esc($location_item['city']) ?>
-                        </h3>
-                        <p>
-                            <?= esc($location_item['description']) ?>
-                        </p>
+                        <div class="card-content">
+                            <img src="<?php echo base_url('/hilton.png'); ?>" alt="Hotel">
+                            <h3>Hilton
+                                <?= esc($location_item['city']) ?>
+                            </h3>
+                            <p>
+                                <?= esc($location_item['description']) ?>
+                            </p>
+                            <p>
+                                Price per night: Rp
+                                <?= number_format($location_item['price_per_night'], 0, ',', '.') ?>/room
+                            </p>
+                        </div>
+                        <a href="/home_customer/<?= $location_item['city']; ?>" class="reservation-button">Reservation</a>
                     </div>
                 <?php endforeach ?>
             <?php else: ?>
