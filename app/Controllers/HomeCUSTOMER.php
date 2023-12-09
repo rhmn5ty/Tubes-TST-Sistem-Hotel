@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\LocationInfo;
+
 class HomeCUSTOMER extends BaseController
 {
     public function index()
@@ -13,6 +15,9 @@ class HomeCUSTOMER extends BaseController
             return redirect()->to('/login');
         }
 
-        return view('headerCUSTOMER') . view('contentCUSTOMER') . view('footer');
+        $model = model(LocationInfo::class);
+        $data['location'] = $model->getLocationInfo();
+
+        return view('headerCUSTOMER') . view('contentCUSTOMER', $data) . view('footer');
     }
 }

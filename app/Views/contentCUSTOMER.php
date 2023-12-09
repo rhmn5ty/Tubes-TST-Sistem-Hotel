@@ -58,17 +58,23 @@
         <h2>Hotel Hilton</h2>
 
         <div class="hotel-card-container">
-            <?php for ($i = 0; $i < 12; $i++): ?>
-                <div class="hotel-card">
-                    <img src="<?php echo base_url('assets/images/hilton_bandung.jpg'); ?>" alt="Hilton Bandung">
-                    <h3>Hilton Bandung</h3>
-                    <p>
-                        Hotel Hilton Bandung is a luxurious 5-star hotel located in the heart of Bandung.
-                        With modern amenities, spacious rooms, and top-notch services, Hilton Bandung
-                        offers a comfortable and unforgettable stay for both business and leisure travelers.
-                    </p>
-                </div>
-            <?php endfor; ?>
+            <?php if (!empty($location) && is_array($location)): ?>
+
+                <?php foreach ($location as $location_item): ?>
+                    <div class="hotel-card">
+                        <img src="<?php echo base_url('assets/images/hotel.jpg'); ?>" alt="Hotel">
+                        <h3>Hilton
+                            <?= esc($location_item['city']) ?>
+                        </h3>
+                        <p>
+                            <?= esc($location_item['description']) ?>
+                        </p>
+                    </div>
+                <?php endforeach ?>
+            <?php else: ?>
+                <h3>No Data</h3>
+                <p>Unable to find any data for you.</p>
+            <?php endif ?>
         </div>
     </div>
 
