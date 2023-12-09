@@ -44,12 +44,17 @@
             border-radius: 6px;
             margin-bottom: 10px;
         }
+
+        .content-container {
+            width: 80%;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="content-container">
         <h2>Hotel Hilton</h2>
 
         <div class="hotel-card-container">

@@ -14,10 +14,15 @@ class LoginController extends BaseController
         $model = model(Login::class);
         $email = $this->request->getPost('email');
         $password = md5($this->request->getPost('password'));
-        $cek = $model->getDataUsers($email, $password);
-        if ($cek == 1) {
-            session()->set('num_user', $cek);
-            return redirect()->to('/');
+        $user = $model->getDataUsers($email, $password);
+        if ($user) {
+            session()->set('user_name', $user->name);
+            session()->set('user_role', $user->role);
+            if ($user->role == 'admin') {
+                return redirect()->to('/home_admin');
+            } else {
+                return redirect()->to('/home_customer');
+            }
         } else {
             return redirect()->to('/login');
         }

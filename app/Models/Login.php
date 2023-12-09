@@ -8,11 +8,11 @@ class Login extends Model
     public function getDataUsers($email, $password)
     {
         $db = \Config\Database::connect();
-        $queryString = 'SELECT name FROM users WHERE 
+        $queryString = 'SELECT name, role FROM users WHERE 
                         email = "' . $email . '" 
                         AND password = "' . $password . '"';
         $query = $db->query($queryString);
-        $results = $query->getResult();
-        return count($results);
+        $result = $query->getRow();
+        return ($result) ? $result : null;
     }
 }
