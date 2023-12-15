@@ -17,4 +17,16 @@ class Reservation extends Model
         $result = $query->getResult();
         return ($result) ? $result : null;
     }
+
+    public function getReservationReport()
+    {
+        $db = \Config\Database::connect();
+        $queryString = 'SELECT city, SUM(total_rooms * total_nights) AS total_room_night
+                        FROM reservation r JOIN location l ON l.location_id = r.location_id
+                        GROUP BY city
+                        ORDER BY l.location_id';
+        $query = $db->query($queryString);
+        $result = $query->getResult();
+        return ($result) ? $result : null;
+    }
 }

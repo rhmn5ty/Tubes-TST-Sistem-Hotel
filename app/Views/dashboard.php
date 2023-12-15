@@ -19,39 +19,6 @@
             /* Minimum height to cover the viewport */
         }
 
-        .hotel-card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            /* Add padding for spacing */
-            overflow-y: auto;
-            /* Allow vertical scrolling for the container */
-            height: 100%;
-            /* Allow the container to take the remaining height */
-        }
-
-        .hotel-card {
-            flex-basis: calc(30% - 20px);
-            /* 25% minus padding */
-            margin: 5px;
-            /* Set a shorter margin */
-            padding: 15px 15px 40px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #fff;
-            position: relative;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hotel-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-bottom: 10px;
-        }
-
         .content-container {
             width: 80%;
             margin: 0 auto;
@@ -60,60 +27,95 @@
             /* Allow the container to grow and take remaining space */
         }
 
-        .reservation-button {
-            position: absolute;
-            bottom: 10px;
-            /* Adjust the distance from the bottom */
-            left: 50%;
-            /* Center horizontally */
-            transform: translateX(-50%);
-            /* Center horizontally */
-            padding: 10px 20px;
-            /* Adjust padding as needed */
-            background-color: #0ad3ff;
-            /* Button background color */
-            color: #fff;
-            /* Button text color */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: auto;
-            text-decoration: none;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 40vh;
+            width: 80vw;
         }
     </style>
 </head>
 
 <body>
-
     <div class="content-container">
-        <h2>Hotel Hilton</h2>
+        <?php if (!empty($reservation)): ?>
+            <div class="chart-container">
+                <canvas id="dataReport"></canvas>
+            </div>
+            <script src="<?= base_url('chartjs/Chart.bundle.min.js') ?>"></script>
+            <script>
+                var dataReport = document.getElementById('dataReport');
+                var data_reservation_report = [];
+                var data_label = [];
 
-        <div class="hotel-card-container">
-            <?php if (!empty($location) && is_array($location)): ?>
-
-                <?php foreach ($location as $location_item): ?>
-                    <div class="hotel-card">
-                        <div class="card-content">
-                            <img src="<?php echo base_url('/hilton.png'); ?>" alt="Hotel">
-                            <h3>Hilton
-                                <?= esc($location_item['city']) ?>
-                            </h3>
-                            <p>
-                                <?= esc($location_item['description']) ?>
-                            </p>
-                            <p>
-                                Price per night: Rp
-                                <?= number_format($location_item['price_per_night'], 0, ',', '.') ?>/room
-                            </p>
-                        </div>
-                        <a href="/home_customer/<?= $location_item['city']; ?>" class="reservation-button">Reservation</a>
-                    </div>
+                <?php foreach ($reservation as $reservation_item): ?>
+                    var total_room_night = <?= esc($reservation_item->total_room_night) ?>;
+                    var city = '<?= esc($reservation_item->city) ?>';
+                    data_reservation_report.push(total_room_night);
+                    data_label.push(city);
                 <?php endforeach ?>
-            <?php else: ?>
-                <h3>No Data</h3>
-                <p>Unable to find any data for you.</p>
-            <?php endif ?>
-        </div>
+
+                var data_chart_reservation = {
+                    labels: data_label,
+                    datasets: [{
+                        label: 'Reservation (Total Room and Nights)',
+                        data: data_reservation_report,
+                        fill: false
+                    }]
+                };
+
+                var chart_reservation = new Chart(dataReport, {
+                    type: 'bar',
+                    data: data_chart_reservation
+                });
+            </script>
+        <?php else: ?>
+            <h3>No Data</h3>
+            <p>Unable to find any data for you.</p>
+        <?php endif ?>
+        <?php if (!empty($reservation)): ?>
+            <table>
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Total reservation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($reservation as $reservation_item): ?>
+                        <tr>
+                            <td>Hilton
+                                <?= esc($reservation_item->city) ?>
+                            </td>
+                            <td>
+                                <?= esc($reservation_item->total_room_night) ?>
+                            </td>
+                        </tr>
+                    <?php endforeach ?>
+                </tbody>
+            </table>
+        <?php else: ?>
+            <p>Kamu belum melakukan reservasi hotel apapun. Silakan melakukan reservasi</p>
+        <?php endif ?>
     </div>
 
 </body>

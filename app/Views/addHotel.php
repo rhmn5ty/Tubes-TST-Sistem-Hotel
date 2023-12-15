@@ -174,6 +174,18 @@
             margin-bottom: 10px;
         }
 
+        textarea {
+            width: 100%;
+            /* Set textarea width to 100% */
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            resize: vertical;
+            /* Allow vertical resizing */
+        }
+
         button {
             width: 100%;
             /* Adjust the width as needed */
@@ -196,6 +208,45 @@
             color: #155724;
             background-color: #d4edda;
             border-color: #c3e6cb;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            width: 95%;
+            /* Add this line to ensure buttons take up the full width */
+        }
+
+        .edit-button,
+        .delete-button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .edit-button {
+            background-color: #28a745;
+            /* Green color for Edit button */
+            color: #fff;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+            /* Red color for Delete button */
+            color: #fff;
+        }
+
+        .buttons a:last-child {
+            margin-right: 0;
         }
     </style>
 
@@ -263,6 +314,10 @@
                                 Price per night: Rp
                                 <?= number_format($location_item['price_per_night'], 0, ',', '.') ?>/room
                             </p>
+                        </div>
+                        <div class="buttons">
+                            <a href="" class="edit-button">Edit</a>
+                            <a href="" class="delete-button">Delete</a>
                         </div>
                     </div>
                 <?php endforeach ?>

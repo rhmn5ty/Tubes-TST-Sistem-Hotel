@@ -11,6 +11,7 @@ class LoginController extends BaseController
     }
     public function login_action()
     {
+        session();
         $model = model(Login::class);
         $email = $this->request->getPost('email');
         $password = md5($this->request->getPost('password'));

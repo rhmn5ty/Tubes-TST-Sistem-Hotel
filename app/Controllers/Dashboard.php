@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\Reservation;
+
+
 class Dashboard extends BaseController
 {
     public function index()
@@ -13,6 +16,9 @@ class Dashboard extends BaseController
             return redirect()->to('/login');
         }
 
-        return view('headerADMIN') . view('dashboard') . view('footer');
+        $model = model(Reservation::class);
+        $data['reservation'] = $model->getReservationReport();
+
+        return view('headerADMIN') . view('dashboard', $data) . view('footer');
     }
 }
