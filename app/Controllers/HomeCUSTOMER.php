@@ -25,8 +25,12 @@ class HomeCUSTOMER extends BaseController
 
     public function detail($city)
     {
+        session();
         $model = model(LocationInfo::class);
-        $data['location'] = $model->getLocationInfo($city);
+        $data = [
+            'location' => $model->getLocationInfo($city),
+            'validation' => \Config\Services::validation()
+        ];
 
         if (empty($data['location'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Lokasi hotel di ' . $city . ' tidak ditemukan');
@@ -39,6 +43,17 @@ class HomeCUSTOMER extends BaseController
     {
         $model = model(LocationInfo::class);
         $reservationModel = model(Reservation::class);
+
+        if (
+            !$this->validate([
+                'startDate' => 'required',
+                'endDate' => 'required'
+            ])
+        ) {
+            $validation = \Config\Services::validation()->getErrors();
+            return redirect()->to('/home_customer/' . $model->getLocationInfo($city)['city'])->withInput()->with('validation', $validation);
+        }
+
 
         $check_in_date = $this->request->getVar('startDate');
         $check_out_date = $this->request->getVar('endDate');
@@ -65,11 +80,7 @@ class HomeCUSTOMER extends BaseController
             'total_cost' => $total_cost
         ]);
 
+        session()->setFlashdata('pesan', 'Thankyou, you just successfully made a reservation!');
         return redirect()->to('/home_customer');
-    }
-
-    public function save()
-    {
-
     }
 }

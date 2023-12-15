@@ -74,6 +74,21 @@
             text-align: center;
             margin: 0 auto;
         }
+
+        .logout-link {
+            text-decoration: none;
+            color: #fff;
+            /* Set the color for the "Logout" link */
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 20px;
+            /* Adjust as needed */
+        }
+
+        .user-info span {
+            margin-right: 10px;
+            /* Adjust the margin between text and image */
+        }
     </style>
 </head>
 
@@ -81,21 +96,22 @@
 
     <header>
         <div class="container">
+            <a href="/logout" class="logout-link">Logout</a>
+            <div class="center-content">
+                <h1>Hotel Reservation</h1>
+                <nav>
+                    <ul>
+                        <li><a href="<?php echo base_url('dashboard'); ?>">Dashboard</a></li>
+                        <li><a href="<?php echo base_url('add'); ?>">Add-Hotel</a></li>
+                        <li><a href="<?php echo base_url('travel'); ?>">Travel</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="user-info">
-                <img src="<?php echo base_url('../file/user_icon.png'); ?>" alt="User Icon">
                 <span>
                     <?php echo session()->get('user_name'); ?>
                 </span>
-            </div>
-            <div class="center-content">
-                <h1>Hotel Management System ADMIN</h1>
-                <nav>
-                    <ul>
-                        <li><a href="<?php echo base_url('rooms'); ?>">Rooms</a></li>
-                        <li><a href="<?php echo base_url('reservations'); ?>">Reservations</a></li>
-                        <li><a href="<?php echo base_url('about'); ?>">Travel</a></li>
-                    </ul>
-                </nav>
+                <img src="<?php echo base_url('/user_icon.png'); ?>" alt="User Icon">
             </div>
         </div>
     </header>

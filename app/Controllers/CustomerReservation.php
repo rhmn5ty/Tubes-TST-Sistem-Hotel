@@ -20,6 +20,6 @@ class CustomerReservation extends BaseController
         $model = model(Reservation::class);
         $data['reservation'] = $model->getUserReservation($user_id);
 
-        return view('headerCUSTOMER') . view('reservationCUSTOMER', $data) . view('footer');
+        return view('headerCUSTOMER') . view('reservation', $data) . view('footer');
     }
 }

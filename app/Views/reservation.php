@@ -84,15 +84,15 @@
                                 <?= esc($reservation_item->total_nights) ?>
                             </td>
                             <td>
-                                <?= esc($reservation_item->total_cost) ?>
+                                Rp
+                                <?= number_format($reservation_item->total_cost, 0, ',', '.') ?>
                             </td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
             </table>
         <?php else: ?>
-            <h3>No Data</h3>
-            <p>Unable to find any data for you.</p>
+            <p>Kamu belum melakukan reservasi hotel apapun. Silakan melakukan reservasi</p>
         <?php endif ?>
     </div>
 

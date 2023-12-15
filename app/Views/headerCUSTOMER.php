@@ -103,7 +103,6 @@
                     <ul>
                         <li><a href="<?php echo base_url('home_customer'); ?>">Rooms</a></li>
                         <li><a href="<?php echo base_url('reservations'); ?>">Reservations</a></li>
-                        <li><a href="<?php echo base_url('about'); ?>">Travel</a></li>
                     </ul>
                 </nav>
             </div>

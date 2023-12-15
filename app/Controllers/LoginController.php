@@ -21,7 +21,7 @@ class LoginController extends BaseController
             session()->set('user_id', $user->user_id);
 
             if ($user->role == 'admin') {
-                return redirect()->to('/home_admin');
+                return redirect()->to('/dashboard');
             } else {
                 return redirect()->to('/home_customer');
             }

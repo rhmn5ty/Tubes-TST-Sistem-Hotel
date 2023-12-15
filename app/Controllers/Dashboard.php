@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class HomeADMIN extends BaseController
+class Dashboard extends BaseController
 {
     public function index()
     {
@@ -13,6 +13,6 @@ class HomeADMIN extends BaseController
             return redirect()->to('/login');
         }
 
-        return view('headerADMIN') . view('contentADMIN') . view('footer');
+        return view('headerADMIN') . view('dashboard') . view('footer');
     }
 }

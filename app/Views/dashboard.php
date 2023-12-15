@@ -80,19 +80,6 @@
             margin-top: auto;
             text-decoration: none;
         }
-
-        .alert {
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid transparent;
-            border-radius: 5px;
-        }
-
-        .alert-success {
-            color: #155724;
-            background-color: #d4edda;
-            border-color: #c3e6cb;
-        }
     </style>
 </head>
 
@@ -100,11 +87,6 @@
 
     <div class="content-container">
         <h2>Hotel Hilton</h2>
-        <?php if (session()->getFlashdata('pesan')): ?>
-            <div class="alert alert-success" role="alert">
-                <?= session()->getFlashdata('pesan'); ?>
-            </div>
-        <?php endif; ?>
 
         <div class="hotel-card-container">
             <?php if (!empty($location) && is_array($location)): ?>

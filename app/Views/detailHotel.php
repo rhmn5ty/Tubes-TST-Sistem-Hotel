@@ -183,6 +183,7 @@
                         Price per night: Rp
                         <?= number_format($location['price_per_night'], 0, ',', '.') ?>/room
                     </p>
+                    <?= $validation->listErrors(); ?>
                     <form class="reservation-form" id="reservation-form" action="/reserve/<?= $location['city']; ?>"
                         method="post">
                         <?= csrf_field(); ?>
