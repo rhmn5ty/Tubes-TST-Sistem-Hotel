@@ -18,6 +18,8 @@ class LoginController extends BaseController
         if ($user) {
             session()->set('user_name', $user->name);
             session()->set('user_role', $user->role);
+            session()->set('user_id', $user->user_id);
+
             if ($user->role == 'admin') {
                 return redirect()->to('/home_admin');
             } else {

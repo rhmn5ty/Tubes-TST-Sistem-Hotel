@@ -108,27 +108,61 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Function to update total payment
-            function updateTotalPayment() {
+            // Function to update total payment and number of nights
+            function updateTotalPaymentAndNights() {
                 // Get values from inputs
                 var roomAmount = parseInt(document.getElementById("roomAmount").value) || 0;
                 var pricePerNight = <?= $location['price_per_night'] ?>;
-                var duration = parseInt(document.getElementById("duration").value) || 0;
+                var startDateInput = document.getElementById("startDate");
+                var startDate = new Date(startDateInput.value);
+                var endDateInput = document.getElementById("endDate");
+                var endDate = new Date(endDateInput.value);
+
+                // Calculate number of nights
+                var duration = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+                duration = isNaN(duration) ? 0 : duration;
 
                 // Calculate total payment
                 var totalPayment = roomAmount * pricePerNight * duration;
 
-                // Display total payment
-                document.getElementById("totalPayment").innerText = "Rp " + totalPayment.toLocaleString();
+                // Display number of nights and total payment
+                document.getElementById("numberOfNights").innerText = "Number of Nights: " + duration;
+                document.getElementById("totalPayment").innerText = totalPayment.toLocaleString();
             }
 
             // Attach event listeners to input fields
-            document.getElementById("roomAmount").addEventListener("input", updateTotalPayment);
-            document.getElementById("duration").addEventListener("input", updateTotalPayment);
+            document.getElementById("roomAmount").addEventListener("input", updateTotalPaymentAndNights);
+            document.getElementById("startDate").addEventListener("input", function () {
+                enforceDateRule("startDate", "endDate");
+                updateTotalPaymentAndNights();
+            });
+            document.getElementById("endDate").addEventListener("input", function () {
+                enforceDateRule("startDate", "endDate");
+                updateTotalPaymentAndNights();
+            });
 
-            updateTotalPayment()
+            function enforceDateRule(startId, endId) {
+                var startDate = new Date(document.getElementById(startId).value);
+                var endDate = new Date(document.getElementById(endId).value);
+                var maxStartDate = new Date(endDate);
+                maxStartDate.setDate(endDate.getDate() - 1);
+
+                // Check if the end date is before the start date
+                document.getElementById("startDate").setAttribute("max", formatDate(maxStartDate));
+                document.getElementById("endDate").setAttribute("min", formatDate(startDate));
+            }
+
+            function formatDate(date) {
+                var year = date.getFullYear();
+                var month = ("0" + (date.getMonth() + 1)).slice(-2);
+                var day = ("0" + date.getDate()).slice(-2);
+                return year + "-" + month + "-" + day;
+            }
+
+            updateTotalPaymentAndNights();
         });
     </script>
+
 </head>
 
 <body>
@@ -149,15 +183,24 @@
                         Price per night: Rp
                         <?= number_format($location['price_per_night'], 0, ',', '.') ?>/room
                     </p>
-                    <form class="reservation-form" action="/reserve" method="post">
+                    <form class="reservation-form" id="reservation-form" action="/reserve/<?= $location['city']; ?>"
+                        method="post">
+                        <?= csrf_field(); ?>
                         <div class="form-group">
                             <label for="roomAmount">Amount of Room:</label>
                             <input type="number" id="roomAmount" name="roomAmount" required min="1" value="1">
                         </div>
 
                         <div class="form-group">
-                            <label for="duration">Duration of Stay (days):</label>
-                            <input type="number" id="duration" name="duration" required min="1" value="1">
+                            <label for="startDate">Start Date:</label>
+                            <input type="date" id="startDate" name="startDate" required
+                                min="<?php echo date('Y-m-d'); ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endDate">End Date:</label>
+                            <input type="date" id="endDate" name="endDate" required
+                                min="<?php echo date('Y-m-d', strtotime('+1 day')); ?>">
                         </div>
                     </form>
                 </div>
@@ -166,12 +209,22 @@
 
         <div class="payment-container">
             <div class="total-payment-container">
+                <!-- Number of nights content -->
+                <p id="numberOfNights">
+                    <!-- Display number of nights here -->
+                </p>
                 <!-- Total payment content -->
                 <h2>Total Payment</h2>
                 <p id="totalPayment">
                     <!-- Display total payment here -->
                 </p>
-                <button class="submit-button" type="submit">Reserve</button>
+                <button class="submit-button" type="button" onclick="submitForm()">Reserve</button>
+
+                <script>
+                    function submitForm() {
+                        document.getElementById("reservation-form").submit();
+                    }
+                </script>
             </div>
         </div>
     </div>

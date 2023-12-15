@@ -1,0 +1,272 @@
+INFO - 2023-12-15 11:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 11:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:01:06 --> Too few arguments to function App\Controllers\HomeCUSTOMER::reserve(), 0 passed in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/HomeCUSTOMER.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:01:14 --> Too few arguments to function App\Controllers\HomeCUSTOMER::reserve(), 0 passed in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/HomeCUSTOMER.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:04:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:04:44 --> Trying to access array offset on value of type null
+in APPPATH/Views/detailHotel.php on line 115.
+ 1 APPPATH/Views/detailHotel.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', '/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Views/detailHotel.php', 115)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Views/detailHotel.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('detailHotel', [], true)
+ 5 APPPATH/Controllers/HomeCUSTOMER.php(29): view('detailHotel', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->detail('Bandungg')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+CRITICAL - 2023-12-15 12:07:20 --> syntax error, unexpected token "}"
+in APPPATH/Controllers/HomeCUSTOMER.php on line 31.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/HomeCUSTOMER.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\HomeCUSTOMER')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\HomeCUSTOMER')
+ 4 SYSTEMPATH/CodeIgniter.php(900): class_exists('\\App\\Controllers\\HomeCUSTOMER', true)
+ 5 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:13:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:13:27 --> Too few arguments to function App\Controllers\HomeCUSTOMER::reserve(), 0 passed in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/HomeCUSTOMER.php on line 36.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:18:52 --> Too few arguments to function App\Controllers\HomeCUSTOMER::reserve(), 0 passed in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/HomeCUSTOMER.php on line 36.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:28:30 --> Too few arguments to function App\Controllers\HomeCUSTOMER::reserve(), 0 passed in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH/Controllers/HomeCUSTOMER.php on line 36.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:36:13 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/HomeCUSTOMER.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:36:41 --> Class "App\Controllers\DateTime" not found
+in APPPATH/Controllers/HomeCUSTOMER.php on line 45.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:43:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 12:43:18 --> Allowed fields must be specified for model: "App\Models\LocationInfo"
+in SYSTEMPATH/Model.php on line 736.
+ 1 SYSTEMPATH/Model.php(736): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\LocationInfo')
+ 2 SYSTEMPATH/BaseModel.php(763): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH/Controllers/HomeCUSTOMER.php(56): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-15 12:45:19 --> mysqli_sql_exception: Unknown column 'user_id' in 'field list' in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/HomeCUSTOMER.php(56): CodeIgniter\BaseModel->save(Array)
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#14 {main}
+CRITICAL - 2023-12-15 12:45:19 --> Unknown column 'user_id' in 'field list'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `location` (`user_id`, `location_id`, `total_rooms`, `check_in_date`, `total_nights`, `check_out_date`, `total_cost`) VALUES (:user_id:, :location_id:, :total_rooms:, :check_in_date:, :total_nights:, :check_out_date:, :total_cost:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/HomeCUSTOMER.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-15 12:51:29 --> mysqli_sql_exception: Column 'user_id' cannot be null in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/HomeCUSTOMER.php(58): CodeIgniter\BaseModel->save(Array)
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#14 {main}
+CRITICAL - 2023-12-15 12:51:29 --> Column 'user_id' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`user_id`, `location_id`, `total_rooms`, `check_in_date`, `total_nights`, `check_out_date`, `total_cost`) VALUES (:user_id:, :location_id:, :total_rooms:, :check_in_date:, :total_nights:, :check_out_date:, :total_cost:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/HomeCUSTOMER.php(58): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Jakarta')
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-15 12:57:52 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `re...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(698): CodeIgniter\Model->insert(Array, false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/HomeCUSTOMER.php(58): CodeIgniter\BaseModel->save(Array)
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Bandung')
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#14 {main}
+CRITICAL - 2023-12-15 12:57:52 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservation` (`user_id`, `location_id`, `total_rooms`, `check_in_date`, `total_nights`, `check_out_date`, `total_cost`) VALUES (:user_id:, :location_id:, :total_rooms:, :check_in_date:, :total_nights:, :check_out_date:, :total_cost:)', [...], false)
+ 2 SYSTEMPATH/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(715): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(698): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/HomeCUSTOMER.php(58): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\HomeCUSTOMER->reserve('Bandung')
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HomeCUSTOMER))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 12:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 12:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-15 13:32:01 --> Cannot use object of type stdClass as array
+in APPPATH/Views/reservationCUSTOMER.php on line 100.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('reservationCUSTOMER', [], true)
+ 4 APPPATH/Controllers/CustomerReservation.php(23): view('reservationCUSTOMER', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\CustomerReservation->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CustomerReservation))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-15 13:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:38:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-15 13:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
