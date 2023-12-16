@@ -199,7 +199,9 @@
 
         .alert {
             padding: 15px;
+            margin-top: 20px;
             margin-bottom: 20px;
+            /* Increase this value to move the alert lower */
             border: 1px solid transparent;
             border-radius: 5px;
         }
@@ -256,13 +258,13 @@
 
 <body>
     <div class="content-container">
-        <h2>Add New Hotel Location</h2>
-
         <?php if (session()->getFlashdata('pesan')): ?>
             <div class="alert alert-success" role="alert">
                 <?= session()->getFlashdata('pesan'); ?>
             </div>
         <?php endif; ?>
+        <h2>Add New Hotel Location</h2>
+
 
         <div class="detail-container">
             <div class="hotel-details">
@@ -283,8 +285,8 @@
                             </div>
                             <div class="input-container">
                                 <div class="form-group">
-                                    <label for="pricePerNight">Price per Night:</label>
-                                    <input type="number" id="pricePerNight" name="price_per_night" min="0" required>
+                                    <label for="price_per_night">Price per Night:</label>
+                                    <input type="number" id="price_per_night" name="price_per_night" min="0" required>
                                 </div>
                             </div>
                         </div>
@@ -316,8 +318,13 @@
                             </p>
                         </div>
                         <div class="buttons">
-                            <a href="" class="edit-button">Edit</a>
-                            <a href="" class="delete-button">Delete</a>
+                            <a href="/edit/<?= $location_item['city']; ?>" class="edit-button">Edit</a>
+                            <form action="/add/<?= $location_item['id']; ?>" method="post" class="d-inline">
+                                <?= csrf_field(); ?>
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger"
+                                    onclick="return confirm('Apakah Anda yakin ingin menghapus data hotel ini?')">Delete</button>
+                            </form>
                         </div>
                     </div>
                 <?php endforeach ?>

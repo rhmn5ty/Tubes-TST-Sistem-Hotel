@@ -1,0 +1,208 @@
+INFO - 2023-12-16 00:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 00:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 00:38:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 00:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-16 01:17:47 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `lo...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `lo...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `lo...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `lo...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/Hotel.php(66): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#12 {main}
+CRITICAL - 2023-12-16 01:17:47 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `location`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Hotel.php(66): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 01:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-16 01:19:34 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `lo...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `lo...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `lo...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `lo...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(1080): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/Hotel.php(66): CodeIgniter\BaseModel->delete(Array)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#12 {main}
+CRITICAL - 2023-12-16 01:19:34 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `location`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1080): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Hotel.php(66): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 01:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-16 01:26:12 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('DELETE FROM `lo...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `lo...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `lo...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `lo...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/BaseModel.php(1115): CodeIgniter\Model->doDelete(Array, false)
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/Hotel.php(66): CodeIgniter\BaseModel->deleteLocation(Array)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#12 {main}
+CRITICAL - 2023-12-16 01:26:12 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2790): CodeIgniter\Database\BaseConnection->query('DELETE FROM `location`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH/Model.php(445): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH/BaseModel.php(1115): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH/Controllers/Hotel.php(66): CodeIgniter\BaseModel->deleteLocation([...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 01:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-16 01:53:03 --> Call to undefined method App\Models\LocationInfo::deleteLocation
+in SYSTEMPATH/Model.php on line 873.
+ 1 APPPATH/Controllers/Hotel.php(66): CodeIgniter\Model->__call('deleteLocation', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->delete('16')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 01:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 01:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 02:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-16 03:11:54 --> Cannot access offset of type string on string
+in APPPATH/Views/editHotel.php on line 310.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editHotel', [], true)
+ 4 APPPATH/Controllers/Hotel.php(84): view('editHotel', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->edit('Jakarta')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 03:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-16 03:12:34 --> Attempt to read property "city" on string
+in APPPATH/Views/editHotel.php on line 310.
+ 1 APPPATH/Views/editHotel.php(310): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "city" on string', '/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Views/editHotel.php', 310)
+ 2 SYSTEMPATH/View/View.php(228): include('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Views/editHotel.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editHotel', [], true)
+ 5 APPPATH/Controllers/Hotel.php(84): view('editHotel', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->edit('Jakarta')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 03:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-16 03:12:49 --> Cannot access offset of type string on string
+in APPPATH/Views/editHotel.php on line 310.
+ 1 SYSTEMPATH/View/View.php(228): include()
+ 2 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editHotel', [], true)
+ 4 APPPATH/Controllers/Hotel.php(84): view('editHotel', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Hotel->edit('Jakarta')
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hotel))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 03:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 03:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 04:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:26:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 05:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

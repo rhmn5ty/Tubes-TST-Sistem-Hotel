@@ -59,4 +59,56 @@ class Hotel extends BaseController
         session()->setFlashdata('pesan', 'Thankyou, you just successfully made a reservation!');
         return redirect()->to('/add');
     }
+
+    public function delete($id)
+    {
+        $model = model(LocationInfo::class);
+        $model->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus');
+        return redirect()->to('/add');
+    }
+
+    public function edit($city)
+    {
+        session();
+        $model = model(LocationInfo::class);
+        $data = [
+            'location' => $model->getLocationInfo($city),
+            'validation' => \Config\Services::validation()
+        ];
+
+        if (empty($data['location'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Lokasi hotel di ' . $city . ' tidak ditemukan');
+        }
+
+        return view('headerADMIN') . view('editHotel', $data) . view('footer');
+    }
+
+    public function update($city)
+    {
+        $model = model(LocationInfo::class);
+
+        // if (
+        //     !$this->validate([
+        //         'city' => 'required|is_unique[location.city]',
+        //         'description' => 'required',
+        //         'price_per_night' => 'required'
+        //     ])
+        // ) {
+        //     $validation = \Config\Services::validation();
+        //     return redirect()->to('/add')->withInput()->with('validation', $validation);
+        // }
+
+        $model->save([
+            'id' => $model->getLocationInfo($city)['id'],
+            'city' => $model->getLocationInfo($city)['city'],
+            'description' => $this->request->getVar('description'),
+            'price_per_night' => $this->request->getVar('price_per_night')
+        ]);
+
+        session()->setFlashdata('pesan', 'Thankyou, you just successfully edit a hotel details!');
+        return redirect()->to('/add');
+    }
+
+
 }
