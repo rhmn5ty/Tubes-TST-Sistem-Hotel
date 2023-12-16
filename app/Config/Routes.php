@@ -19,6 +19,12 @@ $routes->get('/reservations', 'CustomerReservation::index');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/add', 'Hotel::add');
 $routes->post('/add', 'Hotel::save');
+$routes->delete('/add/(:num)', 'Hotel::delete/$1');
+$routes->post('/edit/(:segment)', 'Hotel::update/$1');
+$routes->get('/edit/(:segment)', 'Hotel::edit/$1');
+
+//api
+$routes->get('/reportAPI', 'ReportAPI::index');
 
 //register
 $routes->get('/register', 'RegisterController::index');
