@@ -24,7 +24,7 @@ $routes->post('/edit/(:segment)', 'Hotel::update/$1');
 $routes->get('/edit/(:segment)', 'Hotel::edit/$1');
 
 //api
-$routes->get('/reportAPI', 'ReportAPI::index');
+$routes->get('/reportAPI/(:any)/(:any)', 'ReportAPI::index/$1/$2');
 
 //register
 $routes->get('/register', 'RegisterController::index');
