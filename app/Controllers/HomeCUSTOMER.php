@@ -72,7 +72,7 @@ class HomeCUSTOMER extends BaseController
 
         $reservationModel->save([
             'user_id' => session()->get('user_id'),
-            'location_id' => $model->getLocationInfo($city)['location_id'],
+            'location_id' => $model->getLocationInfo($city)['id'],
             'total_rooms' => $total_rooms,
             'check_in_date' => $check_in_date,
             'total_nights' => $duration,
