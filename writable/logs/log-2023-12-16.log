@@ -203,3 +203,173 @@ Stack trace:
 #9 D:\github\tubestst_satya\Tubes-TST-Sistem-Hotel\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
 #10 D:\github\tubestst_satya\Tubes-TST-Sistem-Hotel\spark(102): CodeIgniter\CLI\Console->run()
 #11 {main}
+ERROR - 2023-12-16 15:19:15 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'hotel_system', 3308, '', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc748...')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc748...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#9 {main}
+CRITICAL - 2023-12-16 15:19:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users 
+                        WHERE email = "satya@gmail.com" 
+                        AND password = "1cbff3d2bdcc7486cc38d9edd9c024df"')
+ 3 APPPATH/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc7486cc38d9edd9c024df')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(92): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 15:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-16 15:22:54 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'hotel_system', 3308, '', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc748...')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc748...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#9 {main}
+CRITICAL - 2023-12-16 15:22:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users 
+                        WHERE email = "satya@gmail.com" 
+                        AND password = "1cbff3d2bdcc7486cc38d9edd9c024df"')
+ 3 APPPATH/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc7486cc38d9edd9c024df')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(92): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+ERROR - 2023-12-16 15:22:55 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'hotel_system', 3308, '', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc748...')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc748...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#9 {main}
+CRITICAL - 2023-12-16 15:22:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/ApiAuth.php(15): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users 
+                        WHERE email = "satya@gmail.com" 
+                        AND password = "1cbff3d2bdcc7486cc38d9edd9c024df"')
+ 3 APPPATH/Controllers/ReportAPI.php(16): App\Models\ApiAuth->getReportAuthentication('satya@gmail.com', '1cbff3d2bdcc7486cc38d9edd9c024df')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReportAPI->index('satya@gmail.com', 'satya')
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(92): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 15:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 15:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 15:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-16 15:23:02 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:184
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(184): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'hotel_system', 3308, '', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/Login.php(16): CodeIgniter\Database\BaseConnection->query('SELECT user_id,...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/LoginController.php(18): App\Models\Login->getDataUsers('satya@gmail.com', '1cbff3d2bdcc748...')
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\LoginController->login_action()
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Models/Login.php(16): CodeIgniter\Database\BaseConnection->query('SELECT user_id,...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/LoginController.php(18): App\Models\Login->getDataUsers('satya@gmail.com', '1cbff3d2bdcc748...')
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(942): App\Controllers\LoginController->login_action()
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php(92): CodeIgniter\CodeIgniter->run()
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Server/rewrite.php(47): require_once('/Users/rahmansa...')
+#9 {main}
+CRITICAL - 2023-12-16 15:23:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH/Models/Login.php(16): CodeIgniter\Database\BaseConnection->query('SELECT user_id, name, role FROM users WHERE 
+                        email = "satya@gmail.com" 
+                        AND password = "1cbff3d2bdcc7486cc38d9edd9c024df"')
+ 3 APPPATH/Controllers/LoginController.php(18): App\Models\Login->getDataUsers('satya@gmail.com', '1cbff3d2bdcc7486cc38d9edd9c024df')
+ 4 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\LoginController->login_action()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(92): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')
+INFO - 2023-12-16 15:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-16 15:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-16 15:24:00 --> Undefined array key "city"
+in APPPATH/Controllers/ReportAPI.php on line 48.
+ 1 APPPATH/Controllers/ReportAPI.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "city"', '/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Controllers/ReportAPI.php', 48)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\ReportAPI->top('satya@gmail.com', 'satya')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportAPI))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(92): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/public/index.php')

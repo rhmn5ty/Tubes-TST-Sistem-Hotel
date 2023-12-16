@@ -30,15 +30,17 @@ class Reservation extends Model
         return ($result) ? $result : null;
     }
 
-    function getReportAuthentication($email, $pass)
+    public function getTopReservation()
     {
         $db = \Config\Database::connect();
-        $queryString = 'SELECT name FROM users 
-                        WHERE email = "' . $email . '” 
-                        AND password = "' . $pass . '"';
+        $queryString = 'SELECT city, SUM(total_rooms * total_nights) AS total_room_night
+                        FROM reservation r JOIN location l ON l.id = r.location_id
+                        GROUP BY city
+                        ORDER BY total_room_night DESC
+                        LIMIT 1';
         $query = $db->query($queryString);
-        $results = $query->getResult();
-        return count($results);
+        $result = $query->getResult();
+        return ($result) ? $result : null;
     }
 
 }
