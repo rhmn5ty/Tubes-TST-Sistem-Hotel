@@ -19,3 +19,7 @@ $routes->get('/reservations', 'CustomerReservation::index');
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/add', 'Hotel::add');
 $routes->post('/add', 'Hotel::save');
+
+//register
+$routes->get('/register', 'RegisterController::index');
+$routes->post('/register_action', 'RegisterController::register_action');
