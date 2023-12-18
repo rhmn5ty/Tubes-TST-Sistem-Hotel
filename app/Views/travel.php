@@ -56,11 +56,15 @@
         <script>
             const ctx = document.getElementById('myChart');
 
-            const response = fetch('https://smart-travel-app.000webhostapp.com/api/bookAnalytics', {
+            const response = fetch('http://localhost:8081/api/bookAnalytics', {
                 method: 'POST',
-                // headers: {
-                //     'Content-Type': 'application/json'
-                // }
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'email': 'admin@gmail.com',
+                    'password': 'admin'
+                })
             }).then(response => response.json())
                 .then(data => {
                     console.log(data);

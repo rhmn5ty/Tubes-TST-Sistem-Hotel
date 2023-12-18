@@ -10,11 +10,15 @@ async function initialRender() {
     // const city = "Denpasar";
     // const quantity = 12;
 
-    const response = fetch('https://smart-travel-app.000webhostapp.com/api/highestBooked', {
+    const response = fetch('http://localhost:8081/api/highestBooked', {
         method: 'POST',
-        // headers: {
-        //     'Content-Type': 'application/json'
-        // }
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'email': 'admin@gmail.com',
+            'password': 'admin'
+        })
     }).then(response => response.json())
         .then(data => {
             console.log(data);
