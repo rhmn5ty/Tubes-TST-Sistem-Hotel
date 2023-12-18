@@ -49,8 +49,8 @@ class ReportAPI extends ResourceController
                 $data[] = $item->total_room_night;
             }
             $data = ['status' => 200,
-                'label' => $label,
-                'data' => $data];
+                'city' => $label,
+                'quantity' => $data];
             return $this->respond($data, 200);
         }
     }
