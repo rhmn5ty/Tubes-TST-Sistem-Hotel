@@ -55,16 +55,16 @@
 
         <script>
             const ctx = document.getElementById('myChart');
+            const form = new FormData();
+            form.append('email', 'admin@gmail.com');
+            form.append('password', 'admin');
 
             const response = fetch('http://localhost:8081/api/bookAnalytics', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    'email': 'admin@gmail.com',
-                    'password': 'admin'
-                })
+                body: form
             }).then(response => response.json())
                 .then(data => {
                     console.log(data);
