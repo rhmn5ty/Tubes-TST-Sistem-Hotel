@@ -13,7 +13,7 @@ class ReportAPI extends ResourceController
         $password = $this->request->getVar('password');
         // $model = model(ApiAuth::class);
         // $cek = $model->getReportAuthentication($email, $password);
-        if ($email == 'admin@gmail.com' && $password == 'admin') {
+        if ($email != 'admin@gmail.com' && $password != 'admin') {
             return ("Wrong Authentication!");
         } else {
             $model1 = model(Reservation::class);
