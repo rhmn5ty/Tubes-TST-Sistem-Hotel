@@ -5,6 +5,7 @@
 
     <!-- Add your CSS stylesheets and other head elements here -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <style>
         /* Add additional styles specific to this view */
@@ -13,6 +14,27 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+        }
+
+        .recomendation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Center the container horizontally */
+            height: 12vh;
+            width: 75%;
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+
+        .recomendation-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #FFC47E;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .detail-container {
@@ -265,6 +287,17 @@
         <?php endif; ?>
         <h2>Add New Hotel Location</h2>
 
+        <!-- Recomendation -->
+        <div class="recomendation">
+            <div class="recomendation-details">
+                <div class="">
+                    <p>Recomendation: PT Smart Travel destination in <b id="highestCity"></b> is the highest booked with
+                        total of <b id="highestBook"></b>
+                    </p>
+                </div>
+            </div>
+        </div>
+
 
         <div class="detail-container">
             <div class="hotel-details">
@@ -334,5 +367,5 @@
             <?php endif ?>
         </div>
     </div>
-
+    <script src="/js/recomendation.js" charset="utf-8"></script>
 </body>

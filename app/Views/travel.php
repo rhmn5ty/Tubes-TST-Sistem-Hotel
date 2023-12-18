@@ -20,88 +20,81 @@
         }
 
         .content-container {
+            display: flex;
+            align-items: center;
+            /* Align items to the top */
+            justify-content: center;
+            /* Add space between hotel-details and payment-container */
+            height: 80vh;
+            /* Adjust as needed */
             width: 80%;
+            /* Adjust the width as needed */
             margin: 0 auto;
-            /* Center the container horizontally */
-            flex: 1;
-            /* Allow the container to grow and take remaining space */
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
+            /* Center the container */
         }
 
         .chart-container {
             display: flex;
-            justify-content: center;
             align-items: center;
-            position: relative;
-            height: 40vh;
-            width: 80vw;
+            justify-content: space-around;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
         }
     </style>
 </head>
 
 <body>
-    <div class="w-3/5">
-        <canvas id="myChart"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="content-container">
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script>
-        const ctx = document.getElementById('myChart');
+        <script>
+            const ctx = document.getElementById('myChart');
 
-        const response = fetch('http://localhost:8081/api/bookAnalytics', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(response => response.json())
-            .then(data => {
-                console.log(data);
-                const myChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: data.label,
-                        datasets: [{
-                            label: 'Number of Bookings',
-                            data: data.data,
-                            backgroundColor: [
-                                'rgba(199, 112, 7, 0.6)',
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
+            const response = fetch('https://smart-travel-app.000webhostapp.com/api/bookAnalytics', {
+                method: 'POST',
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // }
+            }).then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: data.label,
+                            datasets: [{
+                                label: 'Number of Bookings',
+                                data: data.data,
+                                backgroundColor: [
+                                    'rgba(199, 112, 7, 0.6)',
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                ],
+                                borderWidth: 1
+                            }]
                         },
-                        plugins: {
-                            legend: {
-                                display: false
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            },
+                            plugins: {
+                                legend: {
+                                    display: true
+                                }
                             }
                         }
-                    }
+                    });
                 });
-            });
-    </script>
+        </script>
+    </div>
 
 </body>
