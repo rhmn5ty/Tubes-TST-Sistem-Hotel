@@ -7,12 +7,11 @@ use App\Models\Reservation;
 
 class ReportAPI extends ResourceController
 {
-    public function index($seg1 = null, $seg2 = null)
+    public function index()
     {
-
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
         $model = model(ApiAuth::class);
-        $email = $seg1;
-        $password = md5($seg2);
         $cek = $model->getReportAuthentication($email, $password);
         if ($cek == 0) {
             return ("Wrong Authentication!");
@@ -32,12 +31,11 @@ class ReportAPI extends ResourceController
         }
     }
 
-    public function top($seg1 = null, $seg2 = null)
+    public function top()
     {
-
+        $email = $this->request->getVar('email');
+        $password = $this->request->getVar('password');
         $model = model(ApiAuth::class);
-        $email = $seg1;
-        $password = md5($seg2);
         $cek = $model->getReportAuthentication($email, $password);
         if ($cek == 0) {
             return ("Wrong Authentication!");

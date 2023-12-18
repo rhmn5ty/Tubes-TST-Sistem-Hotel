@@ -22,10 +22,11 @@ $routes->post('/add', 'Hotel::save');
 $routes->delete('/add/(:num)', 'Hotel::delete/$1');
 $routes->post('/edit/(:segment)', 'Hotel::update/$1');
 $routes->get('/edit/(:segment)', 'Hotel::edit/$1');
+$routes->get('/travel', 'Travel::index');
 
 //api
-$routes->get('/reportAPI/(:any)/(:any)', 'ReportAPI::index/$1/$2');
-$routes->get('/reportAPItop/(:any)/(:any)', 'ReportAPI::top/$1/$2');
+$routes->post('/reportAPI', 'ReportAPI::index');
+$routes->post('/reportAPItop', 'ReportAPI::top');
 
 //register
 $routes->get('/register', 'RegisterController::index');
