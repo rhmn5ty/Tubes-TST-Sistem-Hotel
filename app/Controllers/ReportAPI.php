@@ -13,9 +13,7 @@ class ReportAPI extends ResourceController
         $password = $this->request->getVar('password');
         // $model = model(ApiAuth::class);
         // $cek = $model->getReportAuthentication($email, $password);
-        if ($email != 'admin@gmail.com' && $password != 'admin') {
-            return ("Wrong Authentication!");
-        } else {
+        if ($email == 'admin@gmail.com' && $password == 'admin') {
             $model1 = model(Reservation::class);
             $temp = $model1->getReservationReport();
             $label = [];
@@ -28,6 +26,9 @@ class ReportAPI extends ResourceController
                 'label' => $label,
                 'data' => $data];
             return $this->respond($data, 200);
+        } else {
+            return ("Wrong Authentication!");
+
         }
     }
 
@@ -38,8 +39,6 @@ class ReportAPI extends ResourceController
         // $model = model(ApiAuth::class);
         // $cek = $model->getReportAuthentication($email, $password);
         if ($email == 'admin@gmail.com' && $password == 'admin') {
-            return ("Wrong Authentication!");
-        } else {
             $model1 = model(Reservation::class);
             $temp = $model1->getTopReservation();
             $label = [];
@@ -52,6 +51,8 @@ class ReportAPI extends ResourceController
                 'city' => $label,
                 'quantity' => $data];
             return $this->respond($data, 200);
+        } else {
+            return ("Wrong Authentication!");
         }
     }
 
