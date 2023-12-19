@@ -26,10 +26,10 @@ class Login extends Model
     public function saveDataUsers($email, $password, $username)
     {
         $this->save([
-            'name'=> $username,
+            'name' => $username,
             'email' => $email,
-            'password'=> $password,
-            'role' => 'user'
-            ]);
+            'password' => $password,
+            'role' => 'customer'
+        ]);
     }
 }
