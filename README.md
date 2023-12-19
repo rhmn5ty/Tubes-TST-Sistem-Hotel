@@ -87,8 +87,6 @@ Selanjutnya, nyalakan XAMPP anda, Start Apache dan MySQL.
 
 Lalu buka php myadmin melalui url "localhost:XXXX" dengan (XXXX) sebagai Port dari Apache. Dalam contoh gambar saya diatas maka saya akan memasukan url "localhost:8040" ke website. Kemudian setelah muncul welcome page XAMPP, klik menu phpMyAdmin pada top navbarnya. Kemudian buatlah sebuah database bernama **hotel_system**.
 
-![Create database hotel_system](https://res.cloudinary.com/djkckue0o/image/upload/v1702023678/README%20LSTI/sasw53gtedj80yrkwszp.jpg)
-
 Selanjutnya, Donwload ENV file pada link gdrive berikut dan masukan kedalam root directory Project.
 
 Link ENV File : https://drive.google.com/drive/folders/18yDcRzLhskIMXgjkjQRytNWWvNAVbQIB
@@ -99,13 +97,11 @@ Selanjutnya, jalankan command migrasi di bawah ini untuk membuat tabel pada data
   php spark migrate
 ```
 
-![migration](https://res.cloudinary.com/djkckue0o/image/upload/v1702032125/README%20LSTI/y4xby2hv35jtwrdrxd7c.png)
 
 Kemudian jalan kan command ini pada terminal untuk mengisi initial data pada tabel (seeding)
 ```bash
    php spark db:seed DbSeeder
 ```
-![db seed](https://res.cloudinary.com/djkckue0o/image/upload/v1702032125/README%20LSTI/jib5r20etueewlerej1f.png)
 
 Selanjutnya, ketik command di bawah ini untuk menjalankan server
 
