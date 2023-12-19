@@ -1,107 +1,146 @@
-# CodeIgniter 4 Development
+# Smart Hotel App
 
-[![PHPUnit](https://github.com/codeigniter4/CodeIgniter4/workflows/PHPUnit/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpunit.yml)
-[![PHPStan](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpstan.yml/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpstan.yml)
-[![Psalm](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-psalm.yml/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-psalm.yml)
-[![Coverage Status](https://coveralls.io/repos/github/codeigniter4/CodeIgniter4/badge.svg?branch=develop)](https://coveralls.io/github/codeigniter4/CodeIgniter4?branch=develop)
-[![Downloads](https://poser.pugx.org/codeigniter4/framework/downloads)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/codeigniter4/CodeIgniter4)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub stars](https://img.shields.io/github/stars/codeigniter4/CodeIgniter4)](https://packagist.org/packages/codeigniter4/framework)
-[![GitHub license](https://img.shields.io/github/license/codeigniter4/CodeIgniter4)](https://github.com/codeigniter4/CodeIgniter4/blob/develop/LICENSE)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/codeigniter4/CodeIgniter4/pulls)
-<br>
+Selamat datang di repositori GitHub untuk Smart Hotel App. Project ini merupakan web application sederhana untuk melakukan reservasi kamar hotel. Project ini dibangun dengan maksud melakukan integrasi Aplikasi booking hotel dengan aplikasi booking travel dalam tugas besar mata kuliah Teknologi Sistem Terintegrasi. 
 
-## What is CodeIgniter?
+### Aplikasi web ini dibuat oleh Kelompok 23 K01. Berikut adalah anggota kelompok kami :
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+```
+1. I Dewa Made Manu Pradnyana - 18221047
+2. Timothy Subekti - 18221063
+3. Rahman Satya - 18221117
 
-This repository holds the source code for CodeIgniter 4 only.
-Version 4 is a complete rewrite to bring the quality and the code into a more modern version,
-while still keeping as many of the things intact that has made people love the framework over the years.
+```
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
 
-### Documentation
+## Fitur
 
-The [User Guide](https://codeigniter4.github.io/userguide/) is the primary documentation for CodeIgniter 4.
+### Customer
 
-The current **in-progress** User Guide can be found [here](https://codeigniter4.github.io/CodeIgniter4/).
-As with the rest of the framework, it is a work in progress, and will see changes over time to structure, explanations, etc.
+- **Login** : Akses yang aman dan terenkripsi untuk setiap Customer, memastikan privasi dan keamanan data.
 
-You might also be interested in the [API documentation](https://codeigniter4.github.io/api/) for the framework components.
+- **Reservasi Kamar Hotel** : Customer dapat melakukan reservasi kamar hotel berdasarkan lokasi yang dipilih, jumlah kamar, tanggal menginap, dan durasinya
 
-## Important Change with index.php
+- **Melihat Daftar Lokasi Hotel** : Daftar lengkap lokasi hotel yang tersedia dengan informasi rinci untuk membantu Customer membuat pilihan yang tepat.
 
-index.php is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- **Melihat Riwayat Reservasi Kamar Hotel** : Akses cepat ke riwayat pembelian memberikan customer informasi lengkap tentang pesanan sebelumnya.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### Pihak Admin
 
-**Please** read the user guide for a better explanation of how CI4 works!
+- **Melihat Jumlah Reservasi setiap Lokasi** : Admin dapat melihat jumlah reservasi yang dibuat di setiap lokasi hotel
 
-## Repository Management
+- **Melihat Data Lokasi Hotel** : Admin dapat melihat seluruh lokasi hotel
 
-CodeIgniter is developed completely on a volunteer basis. As such, please give up to 7 days
-for your issues to be reviewed. If you haven't heard from one of the team in that time period,
-feel free to leave a comment on the issue so that it gets brought back to our attention.
+- **Menambahkan Lokasi Hotel** : Admin dapat menambahkan lokasi hotel dengan mudah, memastikan bahwa daftar selalu terkini dan relevan.
 
-We use GitHub issues to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+- **Mengedit Lokasi Hotel** : Admin dapat mengedit deskripsi dan harga setiap lokasi hotel dengan mudah, memastikan bahwa daftar selalu terkini dan relevan.
 
-If you raise an issue here that pertains to support or a feature request, it will
-be closed! If you are not sure if you have found a bug, raise a thread on the forum first -
-someone else may have encountered the same thing.
+- **Menghapus Lokasi Hotel** : Admin dapat menghapus lokasi hotel dengan mudah, memastikan bahwa daftar selalu terkini dan relevan.
 
-Before raising a new GitHub issue, please check that your bug hasn't already
-been reported or fixed.
+- **Rekomendasi Lokasi Hotel Baru** : Menggunakan informasi destinasi yang paling sering dikunjungi dari website booking travel untuk menentukan lokasi hotel baru
 
-We use pull requests (PRs) for CONTRIBUTIONS to the repository.
-We are looking for contributions that address one of the reported bugs or
-approved work packages.
+- **Melihat Data Order Travel**: Admin dapat melihat data booking travel melalui API sistem travel
+  
+## Tech Stack
 
-Do not use a PR as a form of feature request.
-Unsolicited contributions will only be considered if they fit nicely
-into the framework roadmap.
-Remember that some components that were part of CodeIgniter 3 are being moved
-to optional packages, with their own repository.
+**Framework :** CodeIgniter 4
 
-## Contributing
+**Web Server :** XAMPP
 
-We **are** accepting contributions from the community! It doesn't matter whether you can code, write documentation, or help find bugs,
-all contributions are welcome.
+**Database :** MySQL
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing/README.md).
+**Testing Tools :** Postman
 
-CodeIgniter has had thousands on contributions from people since its creation. This project would not be what it is without them.
+## Prasyarat
 
-<a href="https://github.com/codeigniter4/CodeIgniter4/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=codeigniter4/CodeIgniter4" />
-</a>
+Sebelum memulai, pastikan Anda telah mendownload beberapa tools berikut ini:
 
-Made with [contrib.rocks](https://contrib.rocks).
+- **XAMPP** : Pastikan Anda telah menginstal XAMPP untuk menyediakan lingkungan pengembangan lokal yang mencakup Apache, MySQL, PHP, dan Perl.
+- **Composer** : Composer digunakan untuk mengelola dependensi PHP pada proyek. Pastikan Anda telah menginstal Composer sebelum melanjutkan dengan instalasi.
 
-## Server Requirements
+Untuk prasyatar ini anda dapat menggunakan referensi video berikut ini [Instalasi CodeIgniter 4](https://youtu.be/UhpzEne6omo?si=RTYhK_HoLrGbvm8f).
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+## Instalasi
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+Berikut adalah petunjuk instalasi program untuk menjalankan service pada mesin lokal
 
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
+Pertama-tama, Anda perlu mengkloning proyek ini atau **mengunduh file**
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+```bash
+  git clone https://github.com/rhmn5ty/Tubes-TST-Sistem-Hotel
+```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Pindah ke direktori proyek
 
-## Running CodeIgniter Tests
+```bash
+  cd Path/to/Tubes-TST-Sistem-Hotel
+```
 
-Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+Kemudian install semua dependensi dengan menjalankan kode ini pada terminal
+
+```bash
+  composer install
+```
+
+Selanjutnya, nyalakan XAMPP anda, Start Apache dan MySQL. 
+
+![xampp control panel](https://res.cloudinary.com/djkckue0o/image/upload/v1702023164/README%20LSTI/dznhrgrwtsgopfm1g20o.png)
+
+Lalu buka php myadmin melalui url "localhost:XXXX" dengan (XXXX) sebagai Port dari Apache. Dalam contoh gambar saya diatas maka saya akan memasukan url "localhost:8040" ke website. Kemudian setelah muncul welcome page XAMPP, klik menu phpMyAdmin pada top navbarnya. Kemudian buatlah sebuah database bernama **hotel_system**.
+
+![Create database hotel_system](https://res.cloudinary.com/djkckue0o/image/upload/v1702023678/README%20LSTI/sasw53gtedj80yrkwszp.jpg)
+
+Selanjutnya, Donwload ENV file pada link gdrive berikut dan masukan kedalam root directory Project.
+
+Link ENV File : https://drive.google.com/drive/folders/18yDcRzLhskIMXgjkjQRytNWWvNAVbQIB
+
+Selanjutnya, jalankan command migrasi di bawah ini untuk membuat tabel pada database
+
+```bash
+  php spark migrate
+```
+
+![migration](https://res.cloudinary.com/djkckue0o/image/upload/v1702032125/README%20LSTI/y4xby2hv35jtwrdrxd7c.png)
+
+Kemudian jalan kan command ini pada terminal untuk mengisi initial data pada tabel (seeding)
+```bash
+   php spark db:seed DbSeeder
+```
+![db seed](https://res.cloudinary.com/djkckue0o/image/upload/v1702032125/README%20LSTI/jib5r20etueewlerej1f.png)
+
+Selanjutnya, ketik command di bawah ini untuk menjalankan server
+
+```bash
+  php spark serve
+```
+
+Sekarang anda bisa mengakses layanan backend Smart Hotel melalui server http://localhost:8080/
+
+#### NOTE
+Jika Mengalami Kendala tidak bisa terkonek ke database, maka git Clone project Tubes-TST-Sistem-Hotel ke dalam folder htdocs dengan path C:\xampp\htdocs
+
+Error Yang mungkin terjadi adalah Port Conflict. berikut adalah link referensinya https://www.inforbiro.com/blog/how-to-change-xampp-apache-port
+
+## Referensi API
+
+Berikut adalah panduan API untuk Layanan Backend Smart Hotel
+
+https://drive.google.com/file/d/10Qn4S_46_1tKbfoCjGt5t7gLuZQGJ2Ux/view?usp=sharing
+
+
+## Test dengan POSTMAN
+
+Berikut adalah panduan untuk melakukan testing API dengan POSTMAN
+
+**LINK POSTMAN COLLECTION :**  https://drive.google.com/drive/folders/1A1phllG9e18wfYhf5OOoy_7OQERQdT0b?usp=drive_link
+
+## Deployment
+
+**Smart Hotel :** https://smart-hotel-sisterin.000webhostapp.com/
+
+**Smart Travel :** https://smart-travel-app.000webhostapp.com/
+
+
+## Appendix
+
+**Dokument Kelompok 23 :** https://drive.google.com/file/d/10Qn4S_46_1tKbfoCjGt5t7gLuZQGJ2Ux/view?usp=sharing
+
