@@ -16,3 +16,40 @@ INFO - 2023-12-19 06:34:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-12-19 06:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-19 06:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-12-19 06:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 06:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 06:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 06:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:38:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-19 07:41:41 --> mysqli_sql_exception: Unknown column 'user_id' in 'field list' in /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `lo...', 0)
+#1 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `lo...')
+#2 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `lo...')
+#3 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `lo...', Array, false)
+#4 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Database/Seeds/Reservation.php(45): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/Seeder.php(146): App\Database\Seeds\Reservation->run()
+#6 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/app/Database/Seeds/DbSeeder.php(13): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Database/Seeder.php(146): App\Database\Seeds\DbSeeder->run()
+#8 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/Commands/Database/Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#9 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#10 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/system/CLI/Console.php(46): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#11 /Users/rahmansatya/Documents/Tubes-TST-Sistem-Hotel/spark(102): CodeIgniter\CLI\Console->run()
+#12 {main}
+INFO - 2023-12-19 07:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:46:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 07:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

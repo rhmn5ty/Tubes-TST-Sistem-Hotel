@@ -9,8 +9,8 @@ class Location extends Seeder
     public function run()
     {
         $data = [
-            'city' => 'Bandung',
-            'description' => 'Hotel di bandung',
+            'city' => 'Denpasar',
+            'description' => 'Hotel di denpasar',
             'price_per_night' => 1000000
         ];
 

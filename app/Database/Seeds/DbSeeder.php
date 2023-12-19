@@ -10,6 +10,6 @@ class DbSeeder extends Seeder
     {
         $this->call('User');
         $this->call('Location');
-        // $this->call('Reservation');
+        $this->call('Reservation');
     }
 }
