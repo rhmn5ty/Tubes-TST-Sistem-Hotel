@@ -59,11 +59,8 @@
             form.append('email', 'admin@gmail.com');
             form.append('password', 'admin');
 
-            const response = fetch('http://localhost:8081/api/bookAnalytics', {
+            const response = fetch('http://localhost:8080/api/bookAnalytics', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
                 body: form
             }).then(response => response.json())
                 .then(data => {
@@ -92,7 +89,7 @@
                             },
                             plugins: {
                                 legend: {
-                                    display: true
+                                    display: false
                                 }
                             }
                         }
