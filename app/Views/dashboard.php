@@ -20,11 +20,17 @@
         }
 
         .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* Center the container */
+            height: 80vh;
+            /* Adjust as needed */
             width: 80%;
+            /* Adjust the width as needed */
             margin: 0 auto;
-            /* Center the container horizontally */
-            flex: 1;
-            /* Allow the container to grow and take remaining space */
+            /* Center the container */
         }
 
         table {
@@ -57,6 +63,8 @@
 
 <body>
     <div class="content-container">
+        <h2>Hotel Reservation Analytics</h2>
+
         <?php if (!empty($reservation)): ?>
             <div class="chart-container">
                 <canvas id="dataReport"></canvas>

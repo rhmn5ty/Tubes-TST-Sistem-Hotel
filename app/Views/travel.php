@@ -21,10 +21,10 @@
 
         .content-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            /* Align items to the top */
             justify-content: center;
-            /* Add space between hotel-details and payment-container */
+            /* Center the container */
             height: 80vh;
             /* Adjust as needed */
             width: 80%;
@@ -48,6 +48,7 @@
 
 <body>
     <div class="content-container">
+        <h2>Travel Booking Analytics</h2>
         <div class="chart-container">
             <canvas id="myChart"></canvas>
         </div>
